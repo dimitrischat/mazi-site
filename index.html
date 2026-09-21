@@ -1,1 +1,47 @@
-fgh
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ΜΑΖΙ — οικογενειακό ημερολόγιο</title>
+<meta name="description" content="Το ΜΑΖΙ κρατάει το πρόγραμμα μιας οικογένειας σε ένα μέρος. Χωρίς διαφημίσεις.">
+<style>
+:root{--bg:#F1F0EC;--ink:#16181D;--muted:#5C5E63;--rule:#D9D6CF;--accent:#3C6E57}
+@media (prefers-color-scheme:dark){:root{--bg:#16181D;--ink:#ECEAE4;--muted:#9B9DA3;--rule:#2C2F36;--accent:#7FB79B}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:400 18px/1.75 Georgia,"Times New Roman",serif;-webkit-text-size-adjust:100%}
+main{max-width:34rem;margin:0 auto;padding:4rem 1.25rem 5rem}
+h1{font-size:2.5rem;line-height:1.15;font-weight:400;margin:0 0 1.5rem;letter-spacing:.01em}
+p{margin:0 0 1.25rem}
+.lead{font-size:1.25rem;line-height:1.55}
+.note{color:var(--muted);font-size:.95rem}
+hr{border:0;border-top:1px solid var(--rule);margin:3rem 0}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+nav a{display:inline-block;margin-right:1.5rem}
+</style>
+</head>
+<body>
+<main>
+  <h1>ΜΑΖΙ</h1>
+
+  <p class="lead">Ένα ημερολόγιο για όλη την οικογένεια. Τα ραντεβού, τα ψώνια
+  και οι δουλειές του σπιτιού σε ένα μέρος, ορατά σε όσους πρέπει.</p>
+
+  <p>Χωρίς διαφημίσεις και χωρίς πώληση δεδομένων. Ό,τι είναι προσωπικό μένει
+  προσωπικό μέχρι να το μοιραστείς εσύ.</p>
+
+  <p class="note">Η εφαρμογή είναι υπό ανάπτυξη για Android.</p>
+
+  <hr>
+
+  <nav>
+    <a href="/privacy/">Απόρρητο</a>
+    <a href="/delete/">Διαγραφή λογαριασμού</a>
+  </nav>
+
+  <p class="note">Επικοινωνία: <a href="mailto:privacy@mazi.world">privacy@mazi.world</a></p>
+</main>
+</body>
+</html>
