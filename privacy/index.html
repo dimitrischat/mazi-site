@@ -16,7 +16,7 @@ h2{font-size:1.25rem;font-weight:700;margin:2.5rem 0 .75rem;line-height:1.3}
 p,li{margin:0 0 1rem}
 ul{padding-left:1.25rem;margin:0 0 1.25rem}
 .date{color:var(--muted);font-size:.95rem;margin-bottom:2rem}
-.fill{background:rgba(60,110,87,.12);padding:0 .25em;border-radius:2px}
+.fill{}
 hr{border:0;border-top:1px solid var(--rule);margin:3.5rem 0}
 a{color:var(--accent);text-underline-offset:3px}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
@@ -30,7 +30,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
   <a class="back" href="/">← ΜΑΖΙ</a>
 
   <h1>Πολιτική απορρήτου</h1>
-  <p class="date">Τελευταία ενημέρωση: <span class="fill">21/09/2026</span></p>
+  <p class="date">Τελευταία ενημέρωση: <span class="fill">23/09/2026</span></p>
 
   <p>Το ΜΑΖΙ είναι εφαρμογή οικογενειακού προγραμματισμού. Υπεύθυνος
   επεξεργασίας είναι ο <span class="fill">Χατζηδημητρίου Δημήτριος</span>,
@@ -61,23 +61,29 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
   τροποποιεί τα ημερολόγιά σας, εκτός αν δημιουργήσετε εσείς γεγονός σε
   συγκεκριμένο ημερολόγιο.</p>
 
-  <p><strong>Επαφές.</strong> Αν ενεργοποιήσετε τις γιορτές, διαβάζονται μόνο τα
-  <em>ονόματα</em> των επαφών σας, για να υπολογιστεί ποιος γιορτάζει.
-  Παραμένουν αποθηκευμένα στη συσκευή σας και δεν αποστέλλονται ποτέ σε εμάς.</p>
+  <p><strong>Επαφές.</strong> Αν ενεργοποιήσετε τις γιορτές, διαβάζονται τα
+  <em>ονόματα</em> των επαφών σας και, όπου υπάρχουν, τα <em>γενέθλιά</em> τους
+  — μόνο μέρα και μήνας· η χρονιά απορρίπτεται πριν φτάσει στην εφαρμογή.
+  Χρησιμοποιούνται για να υπολογιστεί ποιος γιορτάζει ή έχει γενέθλια.
+  Τηλέφωνα, διευθύνσεις email και φωτογραφίες επαφών δεν διαβάζονται. Όλα
+  παραμένουν αποθηκευμένα στη συσκευή σας, εξαιρούνται από τα αντίγραφα
+  ασφαλείας της συσκευής και δεν αποστέλλονται ποτέ σε εμάς.</p>
 
   <p><strong>Φωνή.</strong> Η αναγνώριση ομιλίας γίνεται στη συσκευή σας. Αν η
   συσκευή δεν διαθέτει ελληνικό πακέτο εκτός σύνδεσης, σας ρωτάμε ρητά αν θέλετε
   να χρησιμοποιηθεί η υπηρεσία αναγνώρισης της Google, οπότε ο ήχος φεύγει από τη
   συσκευή. Μπορείτε να αρνηθείτε και να πληκτρολογήσετε.</p>
 
-  <p><strong>Βοηθός.</strong> Αν χρησιμοποιήσετε τον βοηθό, το κείμενο ή η
-  φωτογραφία που στέλνετε αποστέλλεται στον πάροχο τεχνητής νοημοσύνης
-  <span class="fill">OpenAI</span> για ανάλυση και επιστρέφει ως πρόταση
-  καταχώρισης. Τίποτα δεν αποθηκεύεται στην οικογένειά σας χωρίς τη ρητή σας
-  έγκριση.</p>
+  <p><strong>Βοηθός.</strong> Αν χρησιμοποιήσετε τον βοηθό, ό,τι στέλνετε
+  αποστέλλεται σε πάροχο τεχνητής νοημοσύνης για ανάλυση: οι εντολές σε
+  κείμενο — γραμμένες ή υπαγορευμένες — στην <span class="fill">Anthropic</span>,
+  οι φωτογραφίες στην <span class="fill">OpenAI</span>. Αποστέλλεται μόνο
+  κείμενο, ποτέ ήχος. Η απάντηση επιστρέφει ως πρόταση καταχώρισης, και τίποτα
+  δεν αποθηκεύεται στην οικογένειά σας χωρίς τη ρητή σας έγκριση.</p>
 
-  <p><strong>Τεχνικά δεδομένα.</strong> Αναφορές σφαλμάτων, βασικά στατιστικά
-  χρήσης και ένα αναγνωριστικό συσκευής για τις ειδοποιήσεις.</p>
+  <p><strong>Τεχνικά δεδομένα.</strong> Αναφορές σφαλμάτων (Firebase
+  Crashlytics) και ένα αναγνωριστικό συσκευής για τις ειδοποιήσεις. Δεν
+  χρησιμοποιούμε εργαλεία ανάλυσης χρήσης.</p>
 
   <h2>Πού αποθηκεύονται</h2>
   <p>Στο Firebase της Google, σε διακομιστές εντός Ευρωπαϊκής Ένωσης
@@ -119,13 +125,16 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
     choose to link Google); the family data you enter (member names, colours,
     optional photo, optional birthday as day and month only, events, lists,
     chores, bills); and copies of device calendars only where you explicitly
-    choose to share them with your family. Contact names, used to calculate name
-    days, stay on your device and never reach our servers. Speech recognition
+    choose to share them with your family. Contact names and birthdays (day and month
+    only — the year is discarded before it reaches the app), used for name days
+    and birthdays, stay on your device, are excluded from device backups and
+    never reach our servers. Speech recognition
     runs on your device; if no offline Greek language pack exists we ask you
-    explicitly before using Google's online recognition. Text or photos sent to
-    the in-app assistant are processed by <span class="fill">OpenAI</span>.
-    We also collect crash reports, basic usage analytics and a notification
-    token.</p>
+    explicitly before using Google's online recognition. Text commands sent to the
+    in-app assistant (typed or dictated — text only, never audio) are processed
+    by <span class="fill">Anthropic</span>, and photos by
+    <span class="fill">OpenAI</span>. We also collect crash reports (Firebase
+    Crashlytics) and a notification token. We use no usage-analytics tools.</p>
     <p>Data is held in Google Firebase on servers in the European Union
     (Belgium), for as long as you use the app. Deleting your account removes
     your personal data within 30 days — see the
