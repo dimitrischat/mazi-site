@@ -30,7 +30,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
   <a class="back" href="/">← ΜΑΖΙ</a>
 
   <h1>Πολιτική απορρήτου</h1>
-  <p class="date">Τελευταία ενημέρωση: <span class="fill">23/09/2026</span></p>
+  <p class="date">Τελευταία ενημέρωση: <span class="fill">06/10/2026</span></p>
 
   <p>Το ΜΑΖΙ είναι εφαρμογή οικογενειακού προγραμματισμού. Υπεύθυνος
   επεξεργασίας είναι ο <span class="fill">Χατζηδημητρίου Δημήτριος</span>,
@@ -54,6 +54,14 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
   γεγονότα, λίστες, δουλειές και λογαριασμοί που καταχωρείτε. Είναι ορατά στα
   ενήλικα μέλη της οικογένειάς σας και σε κανέναν άλλον.</p>
 
+  <p><strong>Καιρός.</strong> Αν ορίσετε πόλη για τον καιρό, το όνομα και οι
+  συντεταγμένες της αποθηκεύονται μαζί με τα οικογενειακά δεδομένα. Για να
+  βρεθεί η πόλη και να έρθει η πρόγνωση, η εφαρμογή επικοινωνεί απευθείας με την
+  υπηρεσία καιρού Open-Meteo, η οποία λαμβάνει το όνομα της πόλης ή τις
+  συντεταγμένες της — όχι στοιχεία της οικογένειάς σας — και, όπως σε κάθε
+  σύνδεση στο διαδίκτυο, τη διεύθυνση IP της συσκευής σας. Η εφαρμογή δεν ζητά
+  άδεια τοποθεσίας.</p>
+
   <p><strong>Ημερολόγια της συσκευής.</strong> Με την άδειά σας, η εφαρμογή
   διαβάζει τα ημερολόγια του κινητού σας για να τα δείχνει δίπλα στο
   οικογενειακό. Αντίγραφο ανεβαίνει στους διακομιστές μας <em>μόνο</em> για
@@ -74,11 +82,17 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
   να χρησιμοποιηθεί η υπηρεσία αναγνώρισης της Google, οπότε ο ήχος φεύγει από τη
   συσκευή. Μπορείτε να αρνηθείτε και να πληκτρολογήσετε.</p>
 
-  <p><strong>Βοηθός.</strong> Αν χρησιμοποιήσετε τον βοηθό, ό,τι στέλνετε
-  αποστέλλεται σε πάροχο τεχνητής νοημοσύνης για ανάλυση: οι εντολές σε
-  κείμενο — γραμμένες ή υπαγορευμένες — στην <span class="fill">Anthropic</span>,
-  οι φωτογραφίες στην <span class="fill">OpenAI</span>. Αποστέλλεται μόνο
-  κείμενο, ποτέ ήχος. Η απάντηση επιστρέφει ως πρόταση καταχώρισης, και τίποτα
+  <p><strong>Βοηθός.</strong> Αν χρησιμοποιήσετε τον βοηθό, ό,τι του στέλνετε
+  αποστέλλεται για ανάλυση στον πάροχο τεχνητής νοημοσύνης
+  <span class="fill">OpenAI</span>: εντολές σε κείμενο — γραμμένες ή
+  υπαγορευμένες — φωτογραφίες, και εικόνες ή αρχεία PDF που μοιράζεστε στο ΜΑΖΙ
+  από άλλη εφαρμογή. Από τη φωνή αποστέλλεται μόνο το κείμενο, ποτέ ήχος. Για
+  να καταλάβει μια εντολή όπως «μετάθεσε τον οδοντίατρο την Παρασκευή», μαζί
+  της αποστέλλονται και όσα στοιχεία της οικογένειας χρειάζεται: τα ονόματα των
+  μελών και των λιστών, οι τίτλοι των ανοιχτών δουλειών, διαδικασιών και
+  λογαριασμών (με το ποσό τους) και τα κοντινά γεγονότα του οικογενειακού
+  ημερολογίου. Τα ημερολόγια της συσκευής σας και οι επαφές σας δεν
+  αποστέλλονται ποτέ. Η απάντηση επιστρέφει ως πρόταση καταχώρισης, και τίποτα
   δεν αποθηκεύεται στην οικογένειά σας χωρίς τη ρητή σας έγκριση.</p>
 
   <p><strong>Τεχνικά δεδομένα.</strong> Αναφορές σφαλμάτων (Firebase
@@ -130,10 +144,15 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
     and birthdays, stay on your device, are excluded from device backups and
     never reach our servers. Speech recognition
     runs on your device; if no offline Greek language pack exists we ask you
-    explicitly before using Google's online recognition. Text commands sent to the
-    in-app assistant (typed or dictated — text only, never audio) are processed
-    by <span class="fill">Anthropic</span>, and photos by
-    <span class="fill">OpenAI</span>. We also collect crash reports (Firebase
+    explicitly before using Google's online recognition. Whatever you send to the in-app assistant — text commands (typed or
+    dictated; text only, never audio), photos, and images or PDF files you share
+    to the app — is processed by <span class="fill">OpenAI</span>, together with
+    the family details it needs to understand the request (member and list
+    names, titles of open chores, procedures and bills with their amounts, and
+    upcoming family events); device calendars and contacts are never sent. If
+    you set a city for the weather, its name and coordinates are stored with your
+    family data, and the app asks Open-Meteo directly for the forecast, which
+    receives the city name or coordinates and your device's IP address. We also collect crash reports (Firebase
     Crashlytics) and a notification token. We use no usage-analytics tools.</p>
     <p>Data is held in Google Firebase on servers in the European Union
     (Belgium), for as long as you use the app. Deleting your account removes
